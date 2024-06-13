@@ -39,8 +39,6 @@ p{
     font-size: 15px;
 }
 
-
-
 a{
     text-decoration: none;
     color: black;
@@ -138,11 +136,13 @@ ul, ol{
 }
 
 .menu ul{
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     margin: 0;
     padding: 0;
     list-style: none;
+	width: 100%;
+    border-bottom: solid 1px #141D45;
 }
 
 .menu a{
@@ -161,95 +161,6 @@ ul, ol{
     color: #961b1e;
     border-bottom: 3px solid #961b1e;
 }
-
-
-@media screen and (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        padding: 20px;
-        position: absolute;
-        top: 70px; /* Ajusta la posición vertical del menú */
-        left: 0;
-        width: 100%;
-        z-index: 999; /* Asegura que el menú esté por encima de otros elementos */
-        transition: top 0.3s ease; /* Agrega una transición suave al desplegar/ocultar el menú */
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .menu a {
-        padding: 10px 0;
-        font-size: 18px;
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-    }
-
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 20px; /* Ajusta la posición vertical del botón de hamburguesa */
-        right: 20px; /* Ajusta la posición horizontal del botón de hamburguesa */
-        z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
-    }
-}
-
-
-/* styles.css */
-
-@media screen and (max-width: 480px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        padding: 20px;
-        position: absolute;
-        top: 70px; /* Ajusta la posición vertical del menú */
-        left: 0;
-        width: 100%;
-        z-index: 999; /* Asegura que el menú esté por encima de otros elementos */
-        transition: top 0.3s ease; /* Agrega una transición suave al desplegar/ocultar el menú */
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .menu a {
-        padding: 10px 0;
-        font-size: 18px;
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-    }
-
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 20px; /* Ajusta la posición vertical del botón de hamburguesa */
-        right: 20px; /* Ajusta la posición horizontal del botón de hamburguesa */
-        z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
-    }
-}
-
 .caja{
     display: flex;
     justify-content: center;
@@ -286,7 +197,7 @@ ul, ol{
 
 
 .cardMision, .cardVision, .cardValores{
-    height: 450px;
+    height: 350px;
     display: flex;
     padding: 2em;
     flex-direction: column;
@@ -301,8 +212,7 @@ ul, ol{
 
 
 .cardMision:hover, .cardVision:hover, .cardValores:hover{
-    color: white;
-    background-color: #ffffff;
+    background-color: white;
     box-shadow: 0 0 11px rgba(27, 26, 26, 0.2);
     transition: all .5s ease-in-out;
 }
@@ -337,7 +247,7 @@ ul, ol{
     justify-content: space-evenly;
     align-items: center;
     margin: auto;
-    border: 10px solid #961b1e;
+    border: 10px solid #141D45;
     margin-bottom: 25px;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -356,7 +266,7 @@ ul, ol{
 }
 
 .cajonForm{
-    background-color: #141D45;
+    background-color: #f2f2f2;
     width: 475px;
     height: 375px;
     display: flex;
@@ -369,7 +279,7 @@ ul, ol{
 }
 
 .cajonForm label{
-    color: white;
+    color: #961b1e;
     width: 50%;
 }
 
@@ -405,7 +315,7 @@ ul, ol{
 
 .video iframe {
     width: 100%;
-    height: 200px;
+    height: 450px;
     border-radius: 20px;
     border: 4px solid #141D45;
 }
@@ -554,18 +464,6 @@ label {
     color: rgb(104, 10, 3);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select {
-    width: 100%;
-    padding: 10px 20px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
 .enviar {
     background-color: rgb(20, 29, 69);
     color: white;
@@ -648,15 +546,7 @@ select {
     transition: all .5s ease-in-out;
 }
 
-@media (max-width: 768px) {
-    .voting-carousel {
-        width: 100%;
-    }
 
-    .carousel-slide img {
-        width: 90%;
-    }
-}
 
 /*------------------------------------*/
 
@@ -690,7 +580,7 @@ h4 {
 }
 
 .h{
-    color: rgb(203, 0, 0);
+    color: rgb(255, 255, 255);
 }
 /*--------------------------------------*/
 /*SECCION DE GALERIA*/
@@ -711,7 +601,7 @@ h4 {
      display: flex;
      padding: 0;
      width: 300%;
-      
+     animation: slide 10s infinite alternate ease-in-out; 
 }
 
 .galeri li{
@@ -731,7 +621,7 @@ h4 {
     display: flex;
     padding: 0;
     width: 300%; 
-    
+    animation: slide 10s infinite alternate ease-in-out;
 }
 
 #imagenes li{
@@ -797,7 +687,16 @@ p{
 }
 
 
- 
+ @keyframes slide{
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+  }
 
 /* Main container for the gallery */
 .galeri {
@@ -854,14 +753,18 @@ p{
 }
 
 /* Container for the route images */
-
+.route-images {
+    width: 100%;
+    margin: 30px auto;
+    overflow: hidden;
+}
 
 /* List styling for images */
 .route-images ul {
     display: flex;
     padding: 0;
     width: 100%;
-   
+    animation: slide 10s infinite alternate ease-in-out;
     list-style: none;
     margin: 0;
 }
@@ -881,10 +784,21 @@ p{
     height: auto;
     object-fit: cover;
     border-radius: 10px;
+    max-height: 225px;
+    min-height: 225px;
 }
 
 /* Keyframes for sliding animation */
-
+@keyframes slide {
+    0% { margin-left: 0%; }
+    20% { margin-left: 0%; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    100% { margin-left: -300%; }
+}
 
 /* Media queries for responsiveness */
 @media (max-width: 991px) {
@@ -961,6 +875,9 @@ p{
   input[type="text"],
   input[type="number"],
   input[type="time"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="text"],
   input[type="tel"],
   select {
     width: 100%;
@@ -1054,7 +971,7 @@ p{
 }
 .rutas{
     width: 100%;
-    height: 400px;
+    min-height: 400px;
     padding-top: 1em;
     display: flex;
     justify-content: space-evenly;
@@ -1064,7 +981,7 @@ p{
 }
 
 .ruta{
-	height: 350px;
+	min-height: 350px;
 	display:inline-block;
 	padding: 0em;
     flex-direction: column;
@@ -1078,7 +995,7 @@ p{
 }
 
 .ruta1{
-	height: 300px;
+	min-height: 300px;
 	float: left;
 	padding: 2em;
     flex-direction: column;
@@ -1095,7 +1012,7 @@ p{
 	*//
 }
 .ruta2{
-	height: 300px; /*alto*/
+	min-height: 300px; /*alto*/
 	display:inline-block;  
 	padding: 2em;
 	flex-direction: column;
@@ -1107,7 +1024,7 @@ p{
     line-height: 30px;
 }
 .ruta3{
-	height: 40px; /*alto*/
+	min-height: 40px; /*alto*/
 	/* display:inline-block;  */
 	padding: 0em;
 	flex-direction: column;
@@ -1136,34 +1053,172 @@ p{
   font-size: 12px;
   margin: 0px 0px 5px 0px;
 }
-@media only screen and (max-width: 1824px) {
-	.tam3{
-	width: 200px;
-    height: 300px;
-	}
+
+
+
+
+/* styles.css */
+
+@media screen and (max-width: 480px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        padding: 20px;
+        position: absolute;
+        top: 70px; /* Ajusta la posición vertical del menú */
+        left: 0;
+        width: 100%;
+        z-index: 999; /* Asegura que el menú esté por encima de otros elementos */
+        transition: top 0.3s ease; /* Agrega una transición suave al desplegar/ocultar el menú */
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu a {
+        padding: 10px 0;
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px; /* Ajusta la posición vertical del botón de hamburguesa */
+        right: 20px; /* Ajusta la posición horizontal del botón de hamburguesa */
+        z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+    }
+}
+
+
+/*375×667 (móvil medio)*/
+@media only screen and (max-width: 667px) {
+
 
 }
-@media only screen and (max-width: 1024px) {
-	.colclass-3 {
-		height: auto;
-	}
-	.cajonQuienes {
-		height: auto;
-		padding: 10px 0;
-	}
-	
-	.tam2{
-	width: 200px;
-    height: 300px;
-	}
 
-}
+
 @media only screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        padding: 20px;
+        position: absolute;
+        top: 70px; /* Ajusta la posición vertical del menú */
+        left: 0;
+        width: 100%;
+        z-index: 999; /* Asegura que el menú esté por encima de otros elementos */
+        transition: top 0.3s ease; /* Agrega una transición suave al desplegar/ocultar el menú */
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu a {
+        padding: 10px 0;
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    /*.cajonQuienes p {
+        padding: 10px 0;
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    .cajonQuienes h1 {
+        padding: 10px 0;
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }*/
+
+    .cardMision {
+		display: block;
+		height: auto !important;
+        width: auto !important;
+        margin: 15px 0;
+	}
+
+    .cardVision {
+		display: block;
+		height: auto !important;
+        width: auto !important;
+        margin: 15px 0;
+	}
+
+    .cardValores {
+		display: block;
+		height: auto !important;
+        width: auto !important;
+        margin: 15px 0;
+	}
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px; /* Ajusta la posición vertical del botón de hamburguesa */
+        right: 20px; /* Ajusta la posición horizontal del botón de hamburguesa */
+        z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+    }
+	.tam2 {
+        width: 90% !important;
+        margin: 5%;
+    }
+
+
+
+/*1366×768 (ordenador portátil medio)*/
 	
   .cajonQuienes {
 		display: block;
 		height: auto !important;
 	}
+ 
+    .cardMision {
+		display: block;
+		height: auto !important;
+        width: auto !important;
+        margin: 15px 0;
+	}
+
+    .cardVision {
+		display: block;
+		height: auto !important;
+        width: auto !important;
+        margin: 15px 0;
+	}
+
+    .cardValores {
+		display: block;
+		height: auto !important;
+        width: auto !important;
+        margin: 15px 0;
+	}
+
 	.colclass-3 {
 		width: 80% !important;
 		margin: 5% 10%;
@@ -1187,7 +1242,62 @@ p{
 	 input[type="submit"] {
         margin-left: 0;
     }
+	
+	.voting-carousel {
+        width: 100%;
+    }
+
+    .carousel-slide img {
+        width: 90%;
+    }
+	.ruta {
+		height: auto !important;
+		display: block;
+		width: 90%;
+		margin: 1% 5%;
+		float: left;
+	}
+	.ruta1 {
+		width: 100%;		
+        padding: 5%;
+		min-height: 200px;
+	}
 
 }
- 
 
+/*1440×900 (escritorio medio)*/
+@media only screen and (max-width: 900px) {
+		.cajonEmpleo {
+        width: 80%;
+        display: block;
+        padding: 5% 10%;
+		height: auto;
+    }
+
+}
+
+
+/*1920×1080 (escritorio grande)*/
+@media only screen and (max-width: 1080px) {
+	.colclass-3 {
+		height: auto;
+	}
+	.cajonQuienes {
+		height: auto;
+		padding: 10px 0;
+	}
+	
+	.tam2{
+	width: 200px;
+    height: 300px;
+	}
+
+}
+
+@media only screen and (max-width: 1818px) {
+	.tam3{
+		width: 200px;
+		height: 300px;
+	}
+
+}
