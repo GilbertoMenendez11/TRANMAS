@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRANMAS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="shortcut icon" href="img/icono.png">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="/img/icono.png">
+    <link rel="stylesheet" href="/css/estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
     <body>
         <header id="cajonCabecera">
             <div class="cajonfoto">
-                <img class="img" src="img/logo ilustrator.png" alt="">
+                <img class="img" src="/img/logo ilustrator.png" alt="">
             </div>
             <!-- Botón de hamburguesa para dispositivos móviles -->
             <div class="menu-toggle" onclick="toggleMenu()">
@@ -25,45 +25,45 @@
             <!-- Barra de navegación -->
             <nav class="menu">
                 <ul class="nav-list">
-                    <li><a href="index.html">INICIO</a></li>
-                    <li><a href="tours.html">TOURS</a></li>
-                    <li><a href="viajesExpress.html">VIAJES EXPRESS</a></li>
-                    <li><a href="Rutas.html">RUTAS</a></li>
-                    <li><a href="Galeria.html">GALERIA</a></li>
+                    <li><a href="/index.html">INICIO</a></li>
+                    <li><a href="/vistas/tours.html">TOURS</a></li>
+                    <li><a href="/vistas/viajesExpress.html">VIAJES EXPRESS</a></li>
+                    <li><a href="/vistas/Rutas.html">RUTAS</a></li>
+                    <li><a href="/vistas/Galeria.html">GALERIA</a></li>
                 </ul>
             </nav>
 
             <section id="ReservaCupo">
-                <h1 id="em">Cotiza tus viajes en el siguiente formulario:</h1>
+                <h1 id="em">Cotiza tus viajes en el siguiente formulario:</h1><br>
                 <div class="contenido">
                     <form action="#">
                         <label for="fecha">Fecha a realizar:</label><br>
-        <input type="date" id="fecha"><br>
+        <input type="date" id="fecha"><br><br>
         
         <label for="destino">Lugar de destino:</label><br>
-        <input type="text" id="destino"><br>
+        <input type="text" id="destino"><br><br>
         
         <label for="reunion">Punto de reunión:</label><br>
-        <input type="text" id="reunion"><br>
+        <input type="text" id="reunion"><br><br>
         
         <label for="personas">Cantidad de personas:</label><br>
-        <input type="number" id="personas" min="1"><br>
+        <input type="number" id="personas" min="1"><br><br>
         
         <label for="hour">Hora de salida:</label><br>
-        <input type="time" id="hour"><br>
+        <input type="time" id="hour"><br><br>
         
         <label for="return_hour">Hora de regreso:</label><br>
-        <input type="time" id="return_hour"><br>
+        <input type="time" id="return_hour"><br><br>
         
         <label for="vehiculo">Tipo de vehículo deseado:</label><br>
         <select id="vehiculo">
             <option value="carro">Carro</option>
             <option value="microbus">Microbus</option>
             <option value="bus">Bus</option>
-        </select><br>
+        </select><br><br>
         
         <label for="telefono">Teléfono del contacto:</label><br>
-        <input type="tel" id="telefono" pattern="[0-9]{8,12}" placeholder="Ingrese su número de teléfono" required><br>
+        <input type="tel" id="telefono" pattern="[0-9]{8,12}" placeholder="Ingrese su número de teléfono" required><br><br>
         
             
                         <input type="submit" value="Enviar" class="enviar">
@@ -80,10 +80,10 @@
                     <h4>lotif.Las Victorias, Sonsonate, El Salvador</h4>
                     <h4>Derechos Reservador 2024</h4>
                 </div>
-                <img src="img/logo ilustrator.png" id="i">
+                <img src="/img/logo ilustrator.png" id="i">
             </div> 
            </footer>   
 
-           <script src="javaScrip.js"></script>
+           <script src="/js/javaScrip.js"></script>
     </body>
 </html>
